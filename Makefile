@@ -21,10 +21,10 @@ all: minebuild ${VERT_SHADERS} ${FRAG_SHADERS}
 	${SC} $< -o $@
 
 %.o: %.cpp
-	${CCP} -c ${LIBS} ${INCLS} -o $@ $<
+	${CCP} -c -o $@ $< ${INCLS}
 
 minebuild: ${OBJS}
-	${CCP} ${LIBS} ${INCLS} -o $@ $^
+	${CCP} -o $@ $^ ${LIBS}
 
 clean:
 	rm client/*.o server/*.o safe_server/*.o setup/*.o shared/*.o
