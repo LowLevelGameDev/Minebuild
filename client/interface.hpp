@@ -1,6 +1,8 @@
 #pragma once
 #include <shared/defs.h>
 
+#include <stdint.h>
+
 /*
 * Interface between server and client
 *
@@ -11,7 +13,7 @@ struct Interface {
 
   typedef /* define this */ uint64_t entity_uid_t;
 
-  Interface(); // set class variables
+  Interface() = default; // set class variables
 
   char *getSeed(); // get the seed size
 

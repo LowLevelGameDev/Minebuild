@@ -5,13 +5,19 @@
 *
 */
 
+#include <client/client.h>
 
+#include <stdio.h>
 
 int main() {
+  Client client;
 
 
+  if (client.open(Interface{}, 800, 600)) {
+    printf("FATAL ERROR    ");
+    return 1;
+  }
 
-
-  
+  return 0;
 }
 

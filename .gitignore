@@ -1,0 +1,5 @@
+build/
+__*
+*out
+*.o
+*.spv
